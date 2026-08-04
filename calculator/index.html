@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-slate-900 flex justify-center items-center min-h-screen">
+    <div class="bg-slate-800 p-5 rounded-2xl shadow-2xl w-[360px] max-w-[95%]">
+      <!-- Display -->
+      <div class="mb-5">
+        <input
+          type="text"
+          id="display"
+          readonly
+          class="w-full h-20 bg-gray-900 text-white text-right text-3xl rounded-xl px-5 outline-none"
+        />
+      </div>
+
+      <!-- Buttons -->
+      <div class="grid grid-cols-4 gap-4">
+        <!-- Row 1 -->
+        <button
+          onclick="clearDisplay()"
+          class="bg-amber-500 hover:bg-amber-600 active:scale-95 transition rounded-xl h-16 text-white text-xl font-semibold"
+        >
+          AC
+        </button>
+
+        <button
+          onclick="deleteLast()"
+          class="bg-amber-500 hover:bg-amber-600 active:scale-95 transition rounded-xl h-16 text-white text-xl font-semibold"
+        >
+          DEL
+        </button>
+
+        <button
+          onclick="append('%')"
+          class="bg-amber-500 hover:bg-amber-600 active:scale-95 transition rounded-xl h-16 text-white text-xl font-semibold"
+        >
+          %
+        </button>
+
+        <button
+          onclick="append('/')"
+          class="bg-amber-500 hover:bg-amber-600 active:scale-95 transition rounded-xl h-16 text-white text-xl font-semibold"
+        >
+          ÷
+        </button>
+
+        <!-- Row 2 -->
+        <button
+          onclick="append('7')"
+          class="bg-slate-700 hover:bg-slate-600 active:scale-95 transition rounded-xl h-16 text-white text-xl"
+        >
+          7
+        </button>
+
+        <button
+          onclick="append('8')"
+          class="bg-slate-700 hover:bg-slate-600 active:scale-95 transition rounded-xl h-16 text-white text-xl"
+        >
+          8
+        </button>
+
+        <button
+          onclick="append('9')"
+          class="bg-slate-700 hover:bg-slate-600 active:scale-95 transition rounded-xl h-16 text-white text-xl"
+        >
+          9
+        </button>
+
+        <button
+          onclick="append('*')"
+          class="bg-amber-500 hover:bg-amber-600 active:scale-95 transition rounded-xl h-16 text-white text-xl font-semibold"
+        >
+          ×
+        </button>
+
+        <!-- Row 3 -->
+        <button
+          onclick="append('4')"
+          class="bg-slate-700 hover:bg-slate-600 active:scale-95 transition rounded-xl h-16 text-white text-xl"
+        >
+          4
+        </button>
+
+        <button
+          onclick="append('5')"
+          class="bg-slate-700 hover:bg-slate-600 active:scale-95 transition rounded-xl h-16 text-white text-xl"
+        >
+          5
+        </button>
+
+        <button
+          onclick="append('6')"
+          class="bg-slate-700 hover:bg-slate-600 active:scale-95 transition rounded-xl h-16 text-white text-xl"
+        >
+          6
+        </button>
+
+        <button
+          onclick="append('-')"
+          class="bg-amber-500 hover:bg-amber-600 active:scale-95 transition rounded-xl h-16 text-white text-xl font-semibold"
+        >
+          −
+        </button>
+
+        <!-- Row 4 -->
+        <button
+          onclick="append('1')"
+          class="bg-slate-700 hover:bg-slate-600 active:scale-95 transition rounded-xl h-16 text-white text-xl"
+        >
+          1
+        </button>
+
+        <button
+          onclick="append('2')"
+          class="bg-slate-700 hover:bg-slate-600 active:scale-95 transition rounded-xl h-16 text-white text-xl"
+        >
+          2
+        </button>
+
+        <button
+          onclick="append('3')"
+          class="bg-slate-700 hover:bg-slate-600 active:scale-95 transition rounded-xl h-16 text-white text-xl"
+        >
+          3
+        </button>
+
+        <button
+          onclick="append('+')"
+          class="bg-amber-500 hover:bg-amber-600 active:scale-95 transition rounded-xl h-16 text-white text-xl font-semibold"
+        >
+          +
+        </button>
+
+        <!-- Row 5 -->
+        <button
+          onclick="append('0')"
+          class="col-span-2 bg-slate-700 hover:bg-slate-600 active:scale-95 transition rounded-xl h-16 text-white text-xl"
+        >
+          0
+        </button>
+
+        <button
+          onclick="append('.')"
+          class="bg-slate-700 hover:bg-slate-600 active:scale-95 transition rounded-xl h-16 text-white text-xl"
+        >
+          .
+        </button>
+
+        <button
+          onclick="calculate()"
+          class="bg-emerald-500 hover:bg-emerald-600 active:scale-95 transition rounded-xl h-16 text-white text-xl font-semibold"
+        >
+          =
+        </button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

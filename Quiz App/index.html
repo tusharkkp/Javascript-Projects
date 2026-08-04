@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="quiz-box">
+        <h1>JavaScript Quiz</h1>
+
+        <!-- Question Number -->
+        <p id="question-number">Question 1 of 5</p>
+
+        <!-- Question -->
+        <h2 id="question">Question will appear here</h2>
+
+        <!-- Options -->
+        <div id="options-container">
+          <!--
+                    JavaScript will create buttons here.
+
+                    Example:
+                    <button class="option-btn">Option 1</button>
+                -->
+        </div>
+
+        <!-- Next Button -->
+        <button id="next-btn">Next →</button>
+
+        <!-- Result -->
+        <div id="result" class="hidden">
+          <h2>Quiz Finished 🎉</h2>
+
+          <p id="score-text">Your Score: 0/5</p>
+
+          <button id="restart-btn">Restart Quiz</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
